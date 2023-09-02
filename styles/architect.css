@@ -12,12 +12,13 @@
 
 .btn-primary {
     padding: 20px 25px;
-    border: none;
+    border: 0;
     color: #fff;
     font-size: 1rem;
     font-weight: 600;
     border-radius: 8px;
     background: #FF900E;
+    cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -29,6 +30,7 @@
 
 /* header styles */
 header {
+    padding: 50px 240px;
     background: rgba(255, 144, 14, 0.10);
 }
 
@@ -36,7 +38,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 240px;
 }
 
 .nav-title {
@@ -60,11 +61,12 @@ nav li a {
 }
 
 /* banner style */
+
 .banner-contents {
-    width: 55%;
+    width: 85%;
     margin: 0 auto;
     text-align: center;
-    padding: 60px 0;
+    padding: 100px 0 30px;
 }
 
 .banner-title {
@@ -77,4 +79,57 @@ nav li a {
     color: #727272;
     font-size: 1rem;
     margin: 30px 0;
+}
+
+.banner img {
+    width: 100%;
+}
+
+/* responsive media queries */
+
+/* mobile devices */
+@media screen and (max-width: 576px) {
+    header {
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 30px;
+    }
+
+    nav ul:last-child {
+        margin: 0;
+    }
+
+    nav li a {
+        font-size: 1rem;
+    }
+
+    .banner-contents {
+        width: 100%;
+    }
+
+    .banner-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* medium or tablet devices */
+@media screen and (min-width: 576px) and (max-width: 960px) {
+    header {
+        padding: 50px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+        /* padding: 50px; */
+    }
+
+    .banner-contents {
+        width: 100%;
+        padding-top: 50px;
+    }
 }
